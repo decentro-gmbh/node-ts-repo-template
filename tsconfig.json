@@ -5,6 +5,7 @@
     "target": "ES6",
     "alwaysStrict": true,
     "outDir": "dist/",
+    "rootDir": "src/",
     "baseUrl": "./",
     "sourceMap": true,
     "declaration": true,
@@ -22,5 +23,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": false,
     "paths": {}
-  }
+  },
+  "include": [
+    "src/**/*"
+  ],
 }
