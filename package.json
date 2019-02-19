@@ -1,0 +1,49 @@
+{
+  "name": "node-ts-repo-template",
+  "version": "1.0.0",
+  "description": "Decentro standard template for bootstrapping node TypeScript repositories!",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "src/*",
+    "dist/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p src/",
+    "test": "jest --config test/jest.config.json",
+    "lint": "tslint --project src/",
+    "debug": "TS_NODE_PROJECT=src/tsconfig.json TS_NODE_FILE=true node -r ts-node/register --inspect=0.0.0.0 --inspect-brk example/index.ts",
+    "start": "ts-node --project src/tsconfig.json example/index.ts",
+    "gen-doc": "typedoc --hideGenerator --tsconfig src/tsconfig.json --out docs/ src/"
+  },
+  "prepublishOnly": "npm run build",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/decentro-gmbh/node-ts-repo-template.git"
+  },
+  "keywords": [
+  ],
+  "author": "Decentro GmbH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/decentro-gmbh/node-ts-repo-template/issues"
+  },
+  "homepage": "https://decentro-gmbh.github.io/node-ts-repo-template/",
+  "devDependencies": {
+    "@decentro/tslint": "^1.0.5",
+    "@types/cron": "^1.6.0",
+    "@types/jest": "^24.0.6",
+    "@types/node": "^11.9.4",
+    "jest": "^24.1.0",
+    "ts-jest": "^24.0.0",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.12.1",
+    "typedoc": "^0.14.2",
+    "typescript": "^3.3.3"
+  },
+  "dependencies": {
+    "cron": "^1.6.0"
+  }
+}
