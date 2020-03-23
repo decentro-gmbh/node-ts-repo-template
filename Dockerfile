@@ -1,8 +1,8 @@
 ####################################################################################
-# node-ts-repo-template Dockerfile for local testing/ development
+# twitter-extract Dockerfile for local testing/ development
 #
-# BUILD: docker build --rm -f Dockerfile -t node-ts-repo-template:latest .
-# RUN: docker run --rm -it --name node-ts-repo-template --entrypoint=/bin/bash -v $(pwd):/app -p "127.0.0.1:9126:9229" node-ts-repo-template:latest
+# BUILD: docker build --rm -f Dockerfile -t twitter-extract:latest .
+# RUN: docker run --rm -it --name twitter-extract --entrypoint=/bin/bash -v $(pwd):/app -p "127.0.0.1:9126:9229" twitter-extract:latest
 #
 ####################################################################################
 
